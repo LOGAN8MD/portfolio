@@ -1,9 +1,10 @@
-import { Code2, Mail, MapPin, Network, Phone } from 'lucide-react';
+import { Code2, Mail, MapPin, Phone } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SectionHeader } from '../ui/SectionHeader.jsx';
 
 const iconMap = {
-  GitHub: Code2,
-  LinkedIn: Network,
+  GitHub: FaGithub,
+  LinkedIn: FaLinkedin,
 };
 
 export function Contact({ data }) {

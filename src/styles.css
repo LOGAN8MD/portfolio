@@ -45,6 +45,7 @@ body::before {
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: linear-gradient(to bottom, black, transparent 82%);
+  animation: gridDrift 24s linear infinite;
 }
 
 a {
@@ -109,6 +110,7 @@ body.modal-open {
   border-radius: 8px;
   background: linear-gradient(135deg, rgba(84, 224, 255, 0.18), rgba(118, 247, 182, 0.11));
   color: var(--cyan);
+  animation: softPulse 4s ease-in-out infinite;
 }
 
 .nav-links {
@@ -164,6 +166,7 @@ body.modal-open {
 
 .hero-copy {
   max-width: 720px;
+  animation: riseIn 700ms ease both;
 }
 
 .hero-kicker {
@@ -289,6 +292,7 @@ h1 {
     linear-gradient(135deg, rgba(84, 224, 255, 0.12), rgba(167, 139, 250, 0.07)),
     rgba(255, 255, 255, 0.035);
   box-shadow: var(--shadow);
+  animation: riseIn 800ms 120ms ease both;
 }
 
 .hero-visual::before,
@@ -304,6 +308,7 @@ h1 {
     linear-gradient(rgba(84, 224, 255, 0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(84, 224, 255, 0.09) 1px, transparent 1px);
   background-size: 34px 34px;
+  animation: gridDrift 18s linear infinite reverse;
 }
 
 .hero-visual::after {
@@ -328,18 +333,21 @@ h1 {
 .orbital-grid span:nth-child(1) {
   width: 100%;
   aspect-ratio: 1;
+  animation: orbitSpin 18s linear infinite;
 }
 
 .orbital-grid span:nth-child(2) {
   width: 72%;
   aspect-ratio: 1;
   border-color: rgba(167, 139, 250, 0.28);
+  animation: orbitSpin 14s linear infinite reverse;
 }
 
 .orbital-grid span:nth-child(3) {
   width: 44%;
   aspect-ratio: 1;
   border-color: rgba(118, 247, 182, 0.3);
+  animation: orbitSpin 10s linear infinite;
 }
 
 .core-node {
@@ -354,6 +362,7 @@ h1 {
   color: #dffbff;
   font-size: 2rem;
   font-weight: 900;
+  animation: coreGlow 3.8s ease-in-out infinite;
 }
 
 .signal-card {
@@ -382,11 +391,13 @@ h1 {
 .signal-card-one {
   top: 16%;
   left: 9%;
+  animation: floatCard 5s ease-in-out infinite;
 }
 
 .signal-card-two {
   right: 8%;
   bottom: 18%;
+  animation: floatCard 5.8s 500ms ease-in-out infinite;
 }
 
 .split-section {
@@ -509,6 +520,7 @@ h1 {
 .project-stack span {
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   min-height: 30px;
   padding: 0 10px;
   border: 1px solid rgba(84, 224, 255, 0.16);
@@ -517,6 +529,13 @@ h1 {
   color: #d9f8ff;
   font-size: 0.82rem;
   font-weight: 700;
+}
+
+.skill-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  color: var(--cyan);
 }
 
 .timeline {
@@ -578,23 +597,47 @@ h1 {
   font: inherit;
   text-align: left;
   transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background 180ms ease;
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+  animation: riseIn 650ms ease both;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 270ms;
 }
 
 .project-card:hover,
 .project-card:focus-visible {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
   border-color: rgba(84, 224, 255, 0.38);
   background: var(--panel-strong);
+  box-shadow: 0 24px 70px rgba(84, 224, 255, 0.13);
   outline: none;
+}
+
+.project-card:hover .project-card-top svg,
+.project-card:focus-visible .project-card-top svg {
+  transform: translate(3px, -3px);
 }
 
 .project-card-top {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+}
+
+.project-card-top svg {
+  transition: transform 220ms ease;
 }
 
 .project-card h3 {
@@ -632,6 +675,7 @@ h1 {
     radial-gradient(circle at 50% 18%, rgba(84, 224, 255, 0.18), transparent 26rem),
     rgba(2, 5, 12, 0.78);
   backdrop-filter: blur(18px);
+  animation: fadeIn 180ms ease both;
 }
 
 .project-modal {
@@ -645,6 +689,7 @@ h1 {
     linear-gradient(135deg, rgba(84, 224, 255, 0.08), rgba(167, 139, 250, 0.06)),
     rgba(7, 13, 27, 0.96);
   box-shadow: 0 30px 110px rgba(0, 0, 0, 0.58);
+  animation: modalIn 240ms ease both;
 }
 
 .project-modal-header {
@@ -809,6 +854,110 @@ h1 {
 
 .footer a {
   color: var(--text);
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gridDrift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 56px 56px;
+  }
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.03);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes coreGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 42px rgba(84, 224, 255, 0.28);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 72px rgba(118, 247, 182, 0.38);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(84, 224, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 24px rgba(84, 224, 255, 0.18);
+  }
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 @media (max-width: 980px) {
