@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Code2, ExternalLink, X } from 'lucide-react';
 import { SectionHeader } from '../ui/SectionHeader.jsx';
+import { SkillBadge } from '../ui/SkillBadge.jsx';
 
 export function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -47,7 +48,7 @@ export function Projects({ projects }) {
             <p>{project.description}</p>
             <div className="project-stack">
               {project.stack.map((tech) => (
-                <span key={tech}>{tech}</span>
+                <SkillBadge key={tech}>{tech}</SkillBadge>
               ))}
             </div>
             <strong>{project.impact}</strong>
@@ -98,7 +99,7 @@ export function Projects({ projects }) {
                 <h4>Technology Stack</h4>
                 <div className="project-stack modal-stack">
                   {selectedProject.stack.map((tech) => (
-                    <span key={tech}>{tech}</span>
+                    <SkillBadge key={tech}>{tech}</SkillBadge>
                   ))}
                 </div>
                 <h4>Outcome</h4>
