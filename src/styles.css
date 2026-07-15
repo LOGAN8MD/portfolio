@@ -629,6 +629,38 @@ h1 {
   transform: translate(3px, -3px);
 }
 
+.project-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 22px;
+  border: 1px solid rgba(84, 224, 255, 0.16);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-card-media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(to top, rgba(5, 7, 13, 0.45), transparent 56%);
+  pointer-events: none;
+}
+
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 320ms ease;
+}
+
+.project-card:hover .project-card-media img,
+.project-card:focus-visible .project-card-media img {
+  transform: scale(1.05);
+}
+
 .project-card-top {
   display: flex;
   justify-content: space-between;
@@ -709,6 +741,51 @@ h1 {
   color: #c7d6eb;
   font-size: 1.02rem;
   line-height: 1.8;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.project-gallery figure {
+  margin: 0;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(84, 224, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-gallery figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.project-gallery-feature img {
+  height: min(58vh, 520px);
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(84, 224, 255, 0.08), transparent 18rem),
+    rgba(255, 255, 255, 0.045);
+}
+
+.project-gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.project-gallery-strip img {
+  aspect-ratio: 16 / 10;
 }
 
 .project-modal-grid {
@@ -983,6 +1060,10 @@ h1 {
   .project-modal-grid {
     grid-template-columns: 1fr;
   }
+
+  .project-gallery-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -1064,6 +1145,10 @@ h1 {
 
   .project-modal-header h3 {
     font-size: 1.85rem;
+  }
+
+  .project-gallery-strip {
+    grid-template-columns: 1fr;
   }
 
   .project-modal-actions,

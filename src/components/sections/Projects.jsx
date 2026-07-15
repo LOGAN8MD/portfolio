@@ -40,6 +40,11 @@ export function Projects({ projects }) {
             type="button"
             onClick={() => setSelectedProject(project)}
           >
+            {project.image && (
+              <div className="project-card-media">
+                <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+              </div>
+            )}
             <div className="project-card-top">
               <span>{project.category}</span>
               <ArrowUpRight size={20} />
@@ -85,6 +90,23 @@ export function Projects({ projects }) {
             </div>
 
             <p className="project-modal-summary">{selectedProject.fullDescription}</p>
+
+            {selectedProject.images?.length > 0 && (
+              <div className="project-gallery" aria-label={`${selectedProject.title} screenshots`}>
+                <figure className="project-gallery-feature">
+                  <img src={selectedProject.images[0].src} alt={selectedProject.images[0].alt} />
+                  <figcaption>{selectedProject.images[0].caption}</figcaption>
+                </figure>
+                <div className="project-gallery-strip">
+                  {selectedProject.images.slice(1).map((image) => (
+                    <figure key={image.src}>
+                      <img src={image.src} alt={image.alt} loading="lazy" />
+                      <figcaption>{image.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="project-modal-grid">
               <div>

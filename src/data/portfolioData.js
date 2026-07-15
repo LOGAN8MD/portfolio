@@ -109,6 +109,34 @@ export const portfolio = {
       category: 'Multi-Lingual Industrial Tools Marketplace',
       description:
         'A full-stack industrial tools marketplace with multilingual browsing, real-time search, cart management, orders, authentication, and cloud media handling.',
+      image: '/projects/3mt-product-range.png',
+      images: [
+        {
+          src: '/projects/3mt-product-range.png',
+          alt: '3MT product range page with filtering and product cards',
+          caption: 'Product range with search, filters, and catalogue cards',
+        },
+        {
+          src: '/projects/3mt-home-products.png',
+          alt: '3MT homepage product section with industrial tools',
+          caption: 'Homepage and featured products section',
+        },
+        {
+          src: '/projects/3mt-product-detail.png',
+          alt: '3MT product detail page with add to cart and WhatsApp enquiry',
+          caption: 'Product detail screen with cart and WhatsApp enquiry',
+        },
+        {
+          src: '/projects/3mt-cart.png',
+          alt: '3MT cart page with order summary',
+          caption: 'Cart flow with quantity controls and order summary',
+        },
+        {
+          src: '/projects/3mt-services.png',
+          alt: '3MT services page showing machine sales and repair services',
+          caption: 'Services page for sales, repair, parts, support, and guidance',
+        },
+      ],
       fullDescription:
         'A full-stack e-commerce platform developed for the industrial tools sector, featuring a responsive customer-facing website and secure backend infrastructure. The platform supports multilingual product browsing, real-time search, shopping cart management, order processing, authentication, and cloud-based media management, delivering a seamless shopping experience across devices.',
       stack: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Cloudinary', 'i18next'],
@@ -137,6 +165,24 @@ export const portfolio = {
       category: 'Full-Stack GIS Land Assessment System',
       description:
         'A full-stack GIS application that analyzes land parcels and calculates buildable acreage after environmental and infrastructure constraints.',
+      image: '/projects/buildable-land-analysis.png',
+      images: [
+        {
+          src: '/projects/buildable-land-analysis.png',
+          alt: 'Buildable Land Analysis Platform showing selected parcel and buildable area results',
+          caption: 'Parcel analysis with buildable, excluded, wetland, flood zone, and building overlays',
+        },
+        {
+          src: '/projects/buildable-land-layers.png',
+          alt: 'Buildable Land Analysis Platform map layers and buffer settings',
+          caption: 'Layer controls, buffer settings, and detailed constraint breakdown',
+        },
+        {
+          src: '/projects/buildable-land-map.png',
+          alt: 'Buildable Land Analysis Platform zoomed map view across Austin',
+          caption: 'Wide map context with parcel constraints and analysis results',
+        },
+      ],
       fullDescription:
         'A full-stack GIS application that analyzes land parcels and calculates buildable acreage after applying environmental and infrastructure constraints such as wetlands, flood zones, and existing buildings. The platform provides an interactive map interface, spatial analysis engine, configurable setback controls, and manual editing tools to help users evaluate land development potential.',
       stack: ['React.js', 'Vite', 'FastAPI', 'GeoPandas', 'Shapely', 'MapLibre GL', 'Mapbox Draw', 'GeoJSON', 'Pydantic'],
@@ -162,6 +208,44 @@ export const portfolio = {
       category: 'AI-Powered Personalized Birthday Song Platform',
       description:
         'An AI-driven web application that generates personalized birthday lyrics and playable audio using user preferences, prompt engineering, and text-to-speech.',
+      image: '/projects/birthday-song-result.png',
+      images: [
+        {
+          src: '/projects/birthday-song-welcome.png',
+          alt: 'Birthday Song AI Generator welcome screen',
+          caption: 'Welcome and onboarding screen',
+        },
+        {
+          src: '/projects/birthday-song-signup.png',
+          alt: 'Birthday Song AI Generator signup screen',
+          caption: 'User signup and registration flow',
+        },
+        {
+          src: '/projects/birthday-song-details.png',
+          alt: 'Birthday Song AI Generator recipient details screen',
+          caption: 'Recipient details collection',
+        },
+        {
+          src: '/projects/birthday-song-preferences.png',
+          alt: 'Birthday Song AI Generator preference selection screen',
+          caption: 'Personalization and preference selection',
+        },
+        {
+          src: '/projects/birthday-song-style.png',
+          alt: 'Birthday Song AI Generator music style screen',
+          caption: 'Music style and song setup',
+        },
+        {
+          src: '/projects/birthday-song-loading.png',
+          alt: 'Birthday Song AI Generator loading screen',
+          caption: 'AI song generation loading state',
+        },
+        {
+          src: '/projects/birthday-song-result.png',
+          alt: 'Birthday Song AI Generator generated song result screen',
+          caption: 'Generated song result with share and download actions',
+        },
+      ],
       fullDescription:
         'An AI-driven web application that generates personalized birthday song lyrics based on user preferences, recipient details, and music style selections. The platform combines AI-generated content, custom prompt engineering, user onboarding flows, and text-to-speech technology to create unique birthday songs that can be played directly within the application.',
       stack: ['React.js', 'Node.js', 'JavaScript', 'MongoDB', 'OpenAI API', 'Text-to-Speech APIs', 'REST APIs', 'Netlify'],
@@ -190,6 +274,19 @@ export const portfolio = {
       category: 'Full-Stack DAM Platform',
       description:
         'A full-stack DAM platform for uploading, organizing, searching, viewing, and downloading digital assets such as images, PDFs, and videos.',
+      image: '/projects/dam-dashboard.png',
+      images: [
+        {
+          src: '/projects/dam-dashboard.png',
+          alt: 'Digital Asset Management System dashboard with upload and filter panels',
+          caption: 'Dashboard with upload panel, filtering, search, and asset cards',
+        },
+        {
+          src: '/projects/dam-asset-grid.png',
+          alt: 'Digital Asset Management System asset grid with view, download, and delete actions',
+          caption: 'Asset grid with metadata, tags, view, download, and delete actions',
+        },
+      ],
       fullDescription:
         'A full-stack Digital Asset Management system built to upload, organize, search, view, and download digital assets such as images, PDFs, and videos. The platform follows a monolithic 3-tier architecture with a React frontend, Node.js and Express backend, MongoDB metadata storage, and local file storage for managing uploaded assets efficiently.',
       stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB Atlas', 'Mongoose', 'Multer', 'Axios', 'CORS', 'Dotenv'],
