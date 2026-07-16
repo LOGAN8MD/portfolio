@@ -5,6 +5,7 @@ import { SkillBadge } from '../ui/SkillBadge.jsx';
 
 export function Projects({ projects }) {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useEffect(() => {
     if (!selectedProject) {
@@ -26,6 +27,17 @@ export function Projects({ projects }) {
     };
   }, [selectedProject]);
 
+  const openProject = (project) => {
+    setSelectedProject(project);
+    setActiveImageIndex(0);
+  };
+
+  const closeProject = () => {
+    setSelectedProject(null);
+  };
+
+  const activeImage = selectedProject?.images?.[activeImageIndex];
+
   return (
     <section id="projects" className="section-shell">
       <SectionHeader
@@ -38,7 +50,7 @@ export function Projects({ projects }) {
             key={project.title}
             className="project-card"
             type="button"
-            onClick={() => setSelectedProject(project)}
+            onClick={() => openProject(project)}
           >
             {project.image && (
               <div className="project-card-media">
@@ -65,7 +77,7 @@ export function Projects({ projects }) {
         <div
           className="modal-backdrop"
           role="presentation"
-          onMouseDown={() => setSelectedProject(null)}
+          onMouseDown={closeProject}
         >
           <article
             className="project-modal"
@@ -83,7 +95,7 @@ export function Projects({ projects }) {
                 className="icon-button"
                 type="button"
                 aria-label="Close project details"
-                onClick={() => setSelectedProject(null)}
+                onClick={closeProject}
               >
                 <X size={20} />
               </button>
@@ -91,18 +103,30 @@ export function Projects({ projects }) {
 
             <p className="project-modal-summary">{selectedProject.fullDescription}</p>
 
-            {selectedProject.images?.length > 0 && (
+            {selectedProject.images?.length > 0 && activeImage && (
               <div className="project-gallery" aria-label={`${selectedProject.title} screenshots`}>
-                <figure className="project-gallery-feature">
-                  <img src={selectedProject.images[0].src} alt={selectedProject.images[0].alt} />
-                  <figcaption>{selectedProject.images[0].caption}</figcaption>
+                <div className="project-gallery-toolbar">
+                  <span>
+                    Screen {activeImageIndex + 1} of {selectedProject.images.length}
+                  </span>
+                </div>
+                <figure className="project-gallery-feature" key={activeImage.src}>
+                  <img src={activeImage.src} alt={activeImage.alt} />
+                  <figcaption>{activeImage.caption}</figcaption>
                 </figure>
-                <div className="project-gallery-strip">
-                  {selectedProject.images.slice(1).map((image) => (
-                    <figure key={image.src}>
-                      <img src={image.src} alt={image.alt} loading="lazy" />
-                      <figcaption>{image.caption}</figcaption>
-                    </figure>
+                <div className="project-gallery-strip" role="tablist" aria-label="Project screenshots">
+                  {selectedProject.images.map((image, index) => (
+                    <button
+                      key={image.src}
+                      className={`project-gallery-thumb ${index === activeImageIndex ? 'is-active' : ''}`}
+                      type="button"
+                      role="tab"
+                      aria-selected={index === activeImageIndex}
+                      aria-label={`Show screenshot ${index + 1}: ${image.caption}`}
+                      onClick={() => setActiveImageIndex(index)}
+                    >
+                      <img src={image.src} alt="" loading="lazy" />
+                    </button>
                   ))}
                 </div>
               </div>
