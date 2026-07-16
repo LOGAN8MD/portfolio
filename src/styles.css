@@ -795,12 +795,21 @@ h1 {
 }
 
 .project-gallery-feature img {
-  height: min(58vh, 520px);
-  object-fit: contain;
+  height: auto;
   background:
     radial-gradient(circle at 50% 20%, rgba(84, 224, 255, 0.08), transparent 18rem),
     rgba(255, 255, 255, 0.045);
   animation: fadeIn 180ms ease both;
+}
+
+.project-gallery.is-landscape .project-gallery-feature img {
+  aspect-ratio: 2766 / 1454;
+  object-fit: cover;
+}
+
+.project-gallery.is-portrait .project-gallery-feature img {
+  height: min(58vh, 520px);
+  object-fit: contain;
 }
 
 .project-gallery-strip {
@@ -1262,7 +1271,11 @@ h1 {
     -webkit-line-clamp: 2;
   }
 
-  .project-gallery-feature img {
+  .project-gallery.is-landscape .project-gallery-feature img {
+    aspect-ratio: 2766 / 1454;
+  }
+
+  .project-gallery.is-portrait .project-gallery-feature img {
     height: min(46vh, 420px);
   }
 

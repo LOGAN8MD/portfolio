@@ -104,7 +104,12 @@ export function Projects({ projects }) {
             <p className="project-modal-summary">{selectedProject.fullDescription}</p>
 
             {selectedProject.images?.length > 0 && activeImage && (
-              <div className="project-gallery" aria-label={`${selectedProject.title} screenshots`}>
+              <div
+                className={`project-gallery ${
+                  selectedProject.galleryAspect === 'portrait' ? 'is-portrait' : 'is-landscape'
+                }`}
+                aria-label={`${selectedProject.title} screenshots`}
+              >
                 <div className="project-gallery-toolbar">
                   <span>
                     Screen {activeImageIndex + 1} of {selectedProject.images.length}

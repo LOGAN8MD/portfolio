@@ -206,6 +206,7 @@ export const portfolio = {
     {
       title: 'Birthday Song AI Generator',
       category: 'AI-Powered Personalized Birthday Song Platform',
+      galleryAspect: 'portrait',
       description:
         'An AI-driven web application that generates personalized birthday lyrics and playable audio using user preferences, prompt engineering, and text-to-speech.',
       image: '/projects/birthday-song-result.png',
