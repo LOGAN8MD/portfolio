@@ -311,6 +311,70 @@ export const portfolio = {
         { label: 'Live App', href: 'https://dams-project.netlify.app/' },
       ],
     },
+    {
+      title: 'Employee Salary Management Platform',
+      category: 'ACME Salary Management',
+      description:
+        'A production-ready HR salary management platform for managing, revising, and reporting compensation data for 10,000 employees across multiple countries.',
+      image: '/projects/acme-salary-dashboard.png',
+      images: [
+        {
+          src: '/projects/acme-salary-dashboard.png',
+          alt: 'ACME Salary Management dashboard with salary reporting filters and metrics',
+          caption: 'Dashboard with currency-specific salary reports, filters, totals, averages, and medians',
+        },
+        {
+          src: '/projects/acme-salary-employees.png',
+          alt: 'ACME Salary Management employee directory with filters and salary rows',
+          caption: 'Employee directory with search, filtering, sorting, pagination, and localized salaries',
+        },
+        {
+          src: '/projects/acme-salary-login.png',
+          alt: 'ACME Salary Management secure sign in screen',
+          caption: 'Secure HR manager sign-in flow for protected salary workspace access',
+        },
+      ],
+      fullDescription:
+        'A production-ready full-stack salary management platform developed for HR managers to manage and analyze salary information for 10,000 employees across multiple countries. The application provides secure authentication, employee discovery, detailed salary history, concurrency-safe salary revisions, currency-specific reporting, responsive interfaces, and a reproducible seeded dataset.',
+      stack: [
+        'React.js',
+        'TypeScript',
+        'Material UI',
+        'TanStack Query',
+        'React Router',
+        'Node.js',
+        'Express.js',
+        'PostgreSQL',
+        'Prisma ORM',
+        'Zod',
+        'Vitest',
+        'Supertest',
+        'Playwright',
+        'Render',
+      ],
+      impact:
+        'Delivered a secure and maintainable salary management platform capable of handling 10,000 employee records, preserving auditable salary revisions, and providing HR managers with reliable salary insights.',
+      details: [
+        'Developed a responsive React.js and TypeScript dashboard using Material UI and TanStack Query.',
+        'Built an employee directory with search, filtering, sorting, pagination, and localized salary presentation.',
+        'Created employee profile pages with current salary information and complete revision history.',
+        'Implemented secure salary revision workflow with mandatory reasons, audit attribution, version conflict detection, and transactional database updates.',
+        'Designed RESTful APIs using Node.js, Express.js, and TypeScript for authentication, employee management, salary revisions, and reporting.',
+        'Created a PostgreSQL relational data model using Prisma ORM for employees, salaries, salary history, HR users, and sessions.',
+        'Developed deterministic seed data with 10,000 employees and 25,000 salary history records across multiple countries, departments, job levels, and currencies.',
+        'Implemented secure opaque session authentication, password hashing, CSRF protection, origin validation, secure cookies, request throttling, and protected API routes.',
+        'Built salary reports with totals, averages, exact medians, employee counts, and organizational breakdowns while keeping currencies isolated.',
+        'Added shared Zod contracts for consistent request and response validation across frontend and backend.',
+        'Created unit, component, API, PostgreSQL integration, end-to-end, performance, and production smoke tests using Vitest, Supertest, and Playwright.',
+        'Deployed the React frontend, Express backend, and managed PostgreSQL database on Render using a single-origin production architecture.',
+      ],
+      githubLinks: [
+        { label: 'GitHub', href: 'https://github.com/LOGAN8MD/acme-salary-management' },
+      ],
+      liveLinks: [
+        { label: 'Live App', href: 'https://acme-salary-management-26x6.onrender.com' },
+      ],
+    },
   ],
   education: [
     {
