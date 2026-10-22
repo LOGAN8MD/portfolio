@@ -44,18 +44,12 @@ export const portfolio = {
       items: ['Node.js', 'Express.js', 'Python', 'Flask', 'GraphQL', 'REST APIs', 'NGINX', 'JWT', 'Spring Boot'],
     },
     {
-      title: 'Database & Cloud',
-      items: [
-        'MongoDB',
-        'Prisma ORM',
-        'BigQuery',
-        'SQL',
-        'Google Cloud Platform',
-        'Cloud Functions',
-        'Compute Engine',
-        'DynamoDB',
-        'Cloud Storage',
-      ],
+      title: 'Database',
+      items: ['MongoDB', 'Prisma ORM', 'SQL', 'DynamoDB'],
+    },
+    {
+      title: 'GCP',
+      items: ['Google Cloud Platform', 'BigQuery', 'Cloud Functions', 'Cloud Storage', 'Compute Engine'],
     },
     {
       title: 'AWS',
