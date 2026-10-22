@@ -32,24 +32,32 @@ export const portfolio = {
   },
   skills: [
     {
-      title: 'AI / ML',
-      items: ['Speech AI', 'Prompt Engineering', 'LLaMA Fine-Tuning', 'Claude AI', 'ChatGPT', 'Vertex AI Workbench'],
-    },
-    {
       title: 'Frontend',
-      items: ['React.js', 'JavaScript', 'Material-UI', 'Tailwind CSS', 'Axios', 'Redux', 'TanStack Query'],
+      items: ['React.js', 'JavaScript', 'TypeScript', 'Redux', 'TanStack Query', 'Material UI', 'Tailwind CSS', 'Axios'],
     },
     {
       title: 'Backend',
-      items: ['Node.js', 'Express.js', 'Python', 'Flask', 'GraphQL', 'REST APIs', 'NGINX', 'JWT'],
+      items: ['Node.js', 'Express.js', 'Python', 'REST APIs', 'GraphQL', 'Java', 'Spring Boot', 'NGINX'],
     },
     {
-      title: 'Database & Cloud',
-      items: ['MongoDB', 'Prisma ORM', 'BigQuery', 'SQL', 'Google Cloud Platform', 'Cloud Functions', 'Compute Engine'],
+      title: 'Data',
+      items: ['DynamoDB', 'MongoDB', 'BigQuery', 'SQL', 'Prisma ORM'],
     },
     {
-      title: 'Mobile & Tools',
-      items: ['Java', 'Android Studio', 'XML Layouts', 'Android SDK', 'GitHub', 'GitLab'],
+      title: 'AWS',
+      items: ['Lambda', 'API Gateway', 'S3', 'IAM', 'CloudWatch', 'Cognito', 'Secrets Manager'],
+    },
+    {
+      title: 'GCP',
+      items: ['Cloud Functions', 'Cloud Storage', 'Compute Engine', 'Vertex AI Workbench'],
+    },
+    {
+      title: 'Architecture & Tools',
+      items: ['Microservices', 'Event-Driven Processing', 'JWT', 'RBAC', 'Git', 'GitHub', 'GitLab'],
+    },
+    {
+      title: 'Mobile',
+      items: ['Android SDK', 'Android Studio', 'XML Layouts'],
     },
   ],
   experience: [
