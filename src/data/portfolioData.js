@@ -71,10 +71,11 @@ export const portfolio = {
       period: '11/2025 - Present',
       location: 'Mumbai, India',
       points: [
-        'Developed backend modules for a role-based service management system using Node.js, Express.js, MongoDB, and Prisma ORM.',
-        'Implemented booking lifecycle management, technician assignment, payment processing, JWT authentication, and role-based access control.',
-        'Built scalable REST APIs with pagination, efficient data modeling, audit logging, and secure branch-level data isolation.',
-        'Used AI-assisted tools such as Claude AI and ChatGPT for API design, debugging, and productivity enhancement.',
+        'Designed and developed a serverless, microservices-oriented backend using Node.js, Express.js, TypeScript, AWS Lambda, and Amazon API Gateway for booking, customer, technician, branch, reporting, and audit operations.',
+        'Implemented JWT authentication, role-based access control (RBAC), and branch-level data isolation across independently managed business domains connected through synchronous REST APIs.',
+        'Built the end-to-end booking lifecycle and technician workflow, including booking creation, technician assignment, status transitions, cancellation, rescheduling, and completion reporting.',
+        'Designed DynamoDB NoSQL access patterns and pagination for application data and integrated Amazon S3 for reports and uploaded documents.',
+        'Applied clean architecture principles to modular backend services, refactoring business workflows into independently managed services to improve maintainability.',
       ],
     },
     {
@@ -83,11 +84,12 @@ export const portfolio = {
       period: '01/2024 - 10/2025',
       location: 'Mumbai, India',
       points: [
-        'Integrated GCP services including Compute Engine, BigQuery with SQL, Cloud Functions, and Cloud Storage using Python to reduce latency and improve backend efficiency.',
-        'Built a secure login interface and analytics dashboard using React.js, Context API, and custom hooks while optimizing rendering and initial load time.',
-        'Led prompt engineering and LLaMA fine-tuning to improve AI output accuracy aligned with business needs.',
-        'Collaborated with 5+ engineers across SF, DMS, and MRC teams to deliver high-performance cloud-based solutions.',
-        'Automated deployment processes using Python scripts and cloud tools to increase release speed and scalability.',
+        'Built a serverless, event-driven microservices architecture using Python, Google Cloud Storage triggers, and Cloud Functions for asynchronous audio transcription and AI summarization.',
+        'Decoupled transcription and summarization into independently scalable processing stages with status-based job processing, reducing bottlenecks and improving throughput during peak workloads.',
+        'Integrated Compute Engine, BigQuery with SQL, Cloud Functions, and Cloud Storage to support backend processing and improve efficiency.',
+        'Developed a secure React.js login interface and analytics dashboard using Context API and custom hooks, optimizing component rendering to reduce initial load time.',
+        'Led prompt engineering and LLaMA model fine-tuning to improve AI output accuracy and align results with business requirements.',
+        'Automated workflows using Python scripts and cloud tools to accelerate releases, collaborating with 5+ engineers across SF, DMS, and MRC teams.',
       ],
     },
     {
