@@ -45,6 +45,7 @@ const skillIcons = {
   'React.js': SiReact,
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
+  'Material-UI': SiMui,
   'Material UI': SiMui,
   'Tailwind CSS': SiTailwindcss,
   Redux: SiRedux,
